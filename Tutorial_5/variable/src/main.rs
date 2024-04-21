@@ -47,7 +47,13 @@ fn main() {
     let _b = [3; 5]; // [3, 3, 3, 3, 3]
     unsafe{
         MUTE_GLOBAL_VAR +=5;
-        print!("{}",MUTE_GLOBAL_VAR)
+        println!("{}",MUTE_GLOBAL_VAR);
     }
+    println!("{}",UNMUTE_GLOBAL_VAR);
+    use_struct();
     
+}
+fn use_struct() {
+    let my_struct_instance = MyStruct { field1: 10 };
+    println!("{}", my_struct_instance.field1); // Struct alanına erişilebilir.
 }
