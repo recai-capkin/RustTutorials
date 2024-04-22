@@ -12,9 +12,17 @@ struct Education{
 }
 fn main() {
     
+    let user = createUser();
+    println!("User created: {}, {}, ID: {}, College: {}, High School: {}", 
+        user.name, user.surname, user.id, user.Education.College, user.Education.High_School);
     
-    
-    
+}
+fn createUser()-> User {
+    let id= read_input("Lütfen id girin: ").parse::<u32>().expect("ID geçerli bir tam sayı değil");
+    let name = read_input("Lütfen ad girin: ");
+    let surname= read_input("Lütfen soyad girin: ");
+    let Education = createEducation();
+    return User{ id:id,name:name,surname:surname,Education:Education };
 }
 fn createEducation() ->Education{
     //Bu kod Result<u32, ParseIntError> döndürdüğü için bu değeri doğrudan bir u32 bekleyen bir yapıya atamak tip uyuşmazlığına sebep olur.
