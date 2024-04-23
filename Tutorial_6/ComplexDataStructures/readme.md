@@ -18,8 +18,8 @@
 String::from fonksiyonunun kullanımı, Rust'ta yaygın olarak görülen bir kalıptır. Rust, bellek güvenliği garantileri sağlayan bir dil olduğu için, String tipindeki verilerin yönetimi (örneğin belleğe alınması, boyutunun değiştirilmesi gibi işlemler) String türü tarafından kapsülleme ile sağlanır. String::from fonksiyonu, bu tür işlemleri kolaylaştırmak için tasarlanmıştır ve bir dize dilimini (&str), sahiplik haklarına sahip (owned) bir String nesnesine dönüştürmek için kullanılır. Bu, Rust'ın bellek yönetim özelliklerinden tam olarak yararlanmanızı sağlar.</p>
         </section>
         <section>
-            <h2>Rust'da neden snake case kullanılır?</h2>
-            <p><b>Tutarlılık:</b> Rust'ın stil rehberi, kodun kolay okunabilir ve tutarlı olmasını sağlamak için var. Snake case kullanımı, Rust ekosistemine katkıda bulunan birçok geliştirici tarafından benimsenmiş ve uygulanmıştır. Bu tutarlılık, Rust'ın farklı kütüphaneleri ve projeleri arasında geçiş yapmayı ve anlamayı kolaylaştırır.           
+<h2>Rust'da neden snake case kullanılır?</h2>
+<p><b>Tutarlılık:</b> Rust'ın stil rehberi, kodun kolay okunabilir ve tutarlı olmasını sağlamak için var. Snake case kullanımı, Rust ekosistemine katkıbulunan birçok geliştirici tarafından benimsenmiş ve uygulanmıştır. Bu tutarlılık, Rust'ın farklı kütüphaneleri ve projeleri arasında geçiş yapmayı ve anlamakolaylaştırır.           
 <br>
 <b>Okunabilirlik:</b> Snake case, kelime sınırlarını açıkça belirler. Kelimeler arasındaki alt çizgiler, isimlerin okunmasını ve anlaşılmasını kolaylaştırır, özellikle de uzun tanımlayıcılar için. Bu, tanımlayıcıların görsel olarak daha hızlı işlenmesine yardımcı olur.
 <br>
