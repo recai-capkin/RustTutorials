@@ -19,9 +19,8 @@ String::from fonksiyonunun kullanımı, Rust'ta yaygın olarak görülen bir kal
         </section>
         <section>
             <h2>Rust'da neden snake case kullanılır?</h2>
-            <p><b>Tutarlılık:</b> Rust'ın stil rehberi, kodun kolay okunabilir ve tutarlı olmasını sağlamak için var. Snake case kullanımı, Rust ekosistemine katkıda bulunan birçok geliştirici tarafından benimsenmiş ve uygulanmıştır. Bu tutarlılık, Rust'ın farklı kütüphaneleri ve projeleri arasında geçiş yapmayı ve anlamayı kolaylaştırır.
-            
-            </br>
+            <p><b>Tutarlılık:</b> Rust'ın stil rehberi, kodun kolay okunabilir ve tutarlı olmasını sağlamak için var. Snake case kullanımı, Rust ekosistemine katkıda bulunan birçok geliştirici tarafından benimsenmiş ve uygulanmıştır. Bu tutarlılık, Rust'ın farklı kütüphaneleri ve projeleri arasında geçiş yapmayı ve anlamayı kolaylaştırır.           
+</br>
 <b>Okunabilirlik:</b> Snake case, kelime sınırlarını açıkça belirler. Kelimeler arasındaki alt çizgiler, isimlerin okunmasını ve anlaşılmasını kolaylaştırır, özellikle de uzun tanımlayıcılar için. Bu, tanımlayıcıların görsel olarak daha hızlı işlenmesine yardımcı olur.
 </br>
 <b>Dilin Tasarım Felsefesi:</b> Rust, güvenlik, hız ve eş zamanlılık konularında yüksek performans sağlamaya odaklanmış bir dildir. Bu odak, dilin tasarım ve kullanımındaki diğer yönleri de etkiler. Rust, programcıların dikkatini dilin bu temel özelliklerine odaklamasına yardımcı olacak şekilde tasarlanmış bir stil rehberine sahiptir. Bu stil rehberi, programcıların kod üzerinde daha az süre harcamalarını ve daha etkili kod yazmalarını sağlar.
