@@ -19,3 +19,28 @@ Rust'da `::` operatörü, "kapsam çözünürlüğü operatörü" olarak kullan�
 **Dilin Tasarım Felsefesi:** Rust, güvenlik, hız ve eş zamanlılık konularında yüksek performans sağlamaya odaklanmış bir dildir. Bu odak, dilin tasarım ve kullanımındaki diğer yönleri de etkiler. Rust, programcıların dikkatini dilin bu temel özelliklerine odaklamasına yardımcı olacak şekilde tasarlanmış bir stil rehberine sahiptir. Bu stil rehberi, programcıların kod üzerinde daha az süre harcamalarını ve daha etkili kod yazmalarını sağlar.
 
 **Araç Desteği:** Rust, `rustfmt` gibi araçlarla birlikte gelir. `rustfmt`, Rust kodunu otomatik olarak biçimlendirir ve stil kılavuzuna uygun hale getirir. `rustfmt` kullanarak, geliştiriciler snake case ve diğer stil kurallarını otomatik olarak uygulayabilirler, bu da manuel stil düzeltmelerine harcanacak zamanı azaltır. Bu nedenlerle, Rust dilinde snake case kullanımı, dilin tasarımının ve topluluğunun önemli bir parçası haline gelmiştir. Dilin bütünüyle uyumlu bir şekilde işlemesini ve geliştiriciler arasında anlaşmazlıkları minimize etmeyi amaçlar.
+
+
+## Vec<T> Yapısı ve Özellikleri?
+
+Rust programlama dilinde `Vec<T>` yapısı, boyutu çalışma zamanında değiştirilebilen ve aynı türden (`T` türünde) elemanları içeren bir koleksiyon türüdür. Rust'ın standart kütüphanesinde dinamik dizi veya esnek dizi olarak işlev görür ve Rust'ta yaygın olarak kullanılan bir veri yapısıdır. Ayrıca, dilin temel güvenlik ve performans özelliklerini de destekler.
+
+**RAM'de Depolanma Yapısı:**
+
+`Vec<T>`'nin elemanları heap üzerinde saklanır. Bu, çalışma zamanı sırasında veri boyutunun ve kapasitesinin değişebilmesi için gereklidir. `Vec<T>` genellikle üç ana bileşenden oluşur:
+
+- **Pointer (İşaretçi):** Heap üzerindeki eleman dizisine bir işaretçi.
+- **Length (Uzunluk):** Vektörde şu anda kaç eleman olduğunu gösterir.
+- **Capacity (Kapasite):** Vektörün bellekte kapladığı maksimum alanı (eleman sayısı olarak) gösterir. Bu değer, vektör yeniden boyutlandırılmadan önce kaç elemanın saklanabileceğini belirler.
+
+Bu yapı, `Vec<T>`'ye eleman eklenirken veya çıkarılırken bellek yönetiminin etkili bir şekilde yapılmasını sağlar. Eğer vektörün uzunluğu kapasitesini aşarsa, daha büyük bir hafıza bloğu tahsis edilir ve mevcut elemanlar yeni bloğa kopyalanır.
+
+
+**Type Safety Özellikleri:**
+
+Rust'ın `Vec<T>` kullanımındaki tip güvenliği (type safety), dilin genel tasarım felsefesiyle uyumludur. `Vec<T>` ile ilgili tip güvenliği özellikleri şunlardır:
+
+- **Homogeneous Collection:** `Vec<T>` yalnızca tek bir veri türünden (`T`) elemanları saklar. Bu, koleksiyonun tüm elemanlarının aynı türde olmasını garantiler, böylece türle ilgili hataların önüne geçilir.
+- **Compile-Time Type Checking:** Rust derleyicisi, `Vec<T>` içine eklenen elemanların türünü derleme zamanında kontrol eder. Yanlış türde bir değer eklenmeye çalışıldığında, derleyici hata verir. Bu, çalışma zamanı hatalarının önlenmesine yardımcı olur.
+- **Memory Safety:** `Vec<T>` kullanımı, bellek güvenliği açısından da korumalıdır. Rust'ın sahiplik (ownership) ve ödünç verme (borrowing) kuralları, `Vec<T>` üzerinde işlem yaparken bellek güvenliğinin korunmasını sağlar. Örneğin, bir vektör üzerinde geçersiz bir indekse erişmeye çalışmak, derleme zamanı veya çalışma zamanı hatalarıyla sonuçlanır.
+- **Bounds Checking:** Rust, `Vec<T>`'ye erişimde sınır denetimi yapar. İndeks operatörü (`vec[index]`) kullanıldığında, Rust çalışma zamanında indeksin geçerli olup olmadığını kontrol eder. Eğer indeks dizi sınırları dışındaysa, bir hata (panic) meydana gelir, böylece bellek güvenliği ihlallerinin önüne geçilir.
