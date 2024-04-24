@@ -44,3 +44,16 @@ Rust'ın `Vec<T>` kullanımındaki tip güvenliği (type safety), dilin genel ta
 - **Compile-Time Type Checking:** Rust derleyicisi, `Vec<T>` içine eklenen elemanların türünü derleme zamanında kontrol eder. Yanlış türde bir değer eklenmeye çalışıldığında, derleyici hata verir. Bu, çalışma zamanı hatalarının önlenmesine yardımcı olur.
 - **Memory Safety:** `Vec<T>` kullanımı, bellek güvenliği açısından da korumalıdır. Rust'ın sahiplik (ownership) ve ödünç verme (borrowing) kuralları, `Vec<T>` üzerinde işlem yaparken bellek güvenliğinin korunmasını sağlar. Örneğin, bir vektör üzerinde geçersiz bir indekse erişmeye çalışmak, derleme zamanı veya çalışma zamanı hatalarıyla sonuçlanır.
 - **Bounds Checking:** Rust, `Vec<T>`'ye erişimde sınır denetimi yapar. İndeks operatörü (`vec[index]`) kullanıldığında, Rust çalışma zamanında indeksin geçerli olup olmadığını kontrol eder. Eğer indeks dizi sınırları dışındaysa, bir hata (panic) meydana gelir, böylece bellek güvenliği ihlallerinin önüne geçilir.
+
+# Girdi İşleme ve Hata Yönetimi
+
+Bu belgede, Rust programlama dilinde kullanıcı girdisinin nasıl işlendiği ve olası hata durumlarının nasıl ele alındığı açıklanmaktadır.
+
+## `.parse::<u32>()` Metodu ve `unwrap_or` Kullanımı
+
+Kullanıcıdan alınan girdiyi sayısal bir değere (`u32`) dönüştürmek için `.parse::<u32>()` metodu kullanılır. Bu metod, başarılı bir dönüşüm gerçekleştiğinde `Ok(u32)` şeklinde bir `Result` tipi döndürür. Başarısız olması durumunda ise `Err` ile bir hata döner.
+
+### Kullanımı
+
+```rust
+let count = read_input("Kaç kullanıcı ekleyeceksiniz? ").parse::<u32>().unwrap_or(0);
