@@ -55,7 +55,7 @@ Rust, bu alanlarda güvenlik ve performansı aynı anda sunarak, modern yazılı
 - **Borrowing:** Değişkenlere referanslar üzerinden güvenli erişim.
 - **Lifetime:** Referansların geçerlilik süresini kontrol eder.
 
-## Struct'lar ve Enum'lar
+## [Struct'lar ve Enum'lar](http://www.ornek.com) örnek için.
 
 - **Struct:** Karmaşık veri türlerini gruplamak için kullanılır.
 - **Enum:** Birden fazla form veya türdeki değerleri tek bir tür altında toplar.
