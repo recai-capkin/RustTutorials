@@ -30,4 +30,13 @@ fn main() {
     
         println!("C'nin abs fonksiyonu: {}", abs(-3));  // C standard kütüphanesinden bir fonksiyon
     }
+    unsafe {
+        let mut data = vec![1, 2, 3, 4];
+        let data_ptr = data.as_mut_ptr();  // data_ptr, heap'teki vektörün ilk elemanına işaret eder
+    
+        // data_ptr üzerinden ilk elemanı direkt olarak değiştirme
+        *data_ptr = 10;
+    
+        println!("Güncellenmiş vektör: {:?}", data);
+    }
 }
