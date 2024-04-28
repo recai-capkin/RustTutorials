@@ -23,7 +23,7 @@ Rust, bu alanlarda güvenlik ve performansı aynı anda sunarak, modern yazılı
 
 
 
-## [Değişkenler ve Sabitler]
+## [Değişkenler ve Sabitler](https://github.com/recai-capkin/RustTutorials/tree/main/Tutorial_1/Variables_Constants)
 
 - **Değişkenler:** Rust'ta değişkenler varsayılan olarak sabittir (immutable). `mut` anahtar kelimesi ile değişkenler değiştirilebilir (mutable) hale getirilebilir.
 - **Sabitler:** `const` anahtar kelimesi ile tanımlanır ve programın çalışma süresi boyunca değişmezler.
