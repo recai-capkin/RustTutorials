@@ -28,7 +28,7 @@ Rust, bu alanlarda güvenlik ve performansı aynı anda sunarak, modern yazılı
 - **Değişkenler:** Rust'ta değişkenler varsayılan olarak sabittir (immutable). `mut` anahtar kelimesi ile değişkenler değiştirilebilir (mutable) hale getirilebilir.
 - **Sabitler:** `const` anahtar kelimesi ile tanımlanır ve programın çalışma süresi boyunca değişmezler.
 
-## [Veri Türleri](https://github.com/recai-capkin/RustTutorials/tree/main/Tutorial_5/variable)
+## [Veri Türleri](https://github.com/recai-capkin/RustTutorials/tree/main/Tutorial_3/data-types)
 
 - **Temel Veri Türleri:** i32, u32, f64, bool, char gibi.
 - **Karmaşık Veri Türleri:** arrays, tuples, vectors, hash maps.
@@ -44,7 +44,7 @@ Rust, bu alanlarda güvenlik ve performansı aynı anda sunarak, modern yazılı
 - **Fonksiyonlar:** `fn` anahtar kelimesi ile tanımlanır.
 - **Makrolar:** `macro_rules!` ile tanımlanır ve tekrar kullanılabilir kod parçacıkları oluşturur.
 
-## [Hata Yönetimi]
+## [Hata Yönetimi](https://github.com/recai-capkin/RustTutorials/tree/main/Tutorial_2/Error-Management)
 
 - **Result ve Option Türleri:** Hataları yönetmek için `Result<T, E>` ve varlık/yokluk durumlarını ifade etmek için `Option<T>` kullanılır.
 - **Panik Yönetimi:** Programın beklenmeyen durumlarda durmasını sağlar.
