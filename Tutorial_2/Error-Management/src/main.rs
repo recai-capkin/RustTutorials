@@ -1,5 +1,5 @@
 mod result_management;
-
+mod options_management;
 fn main() {
     //Result Management
     let file_path = "example.txt";
@@ -8,4 +8,7 @@ fn main() {
         Err(e) => println!("Hata: {}", e),
     }
 
+    //Options Management
+    options_management::getAges();
+    options_management::get_Index();
 }
